@@ -1,0 +1,17 @@
+Proceso de Desenvolvimento do sistema
+
+BD - API/ C# - Web React (HTML + CSS) / Mobile React Native (HTML + CSS)
+
+============================================================================================
+Banco de dados
+
+MER - Modelo Entidade Relacionamento
+
+Chave primária = Atributo principal (Dado mais importante da tabela) - Toda entidade precisa ter uma chave primaria
+
+Chave estrangeira = quando a chave primária de uma entidade é referenciada em outra entidade (desse modo é o relacionamento)
+
+Cardinalidade = 1:1 / 1:N / N:N
+
+Construir primeiro o MER, depois as entidades e por fim as cardinalidades
+

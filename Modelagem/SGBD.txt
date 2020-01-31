@@ -1,0 +1,24 @@
+SGBD - Sistema de Gerenciamento de Banco de Dados = armazena de foram otimizada varios bancos de dados
+
+SQL - comando para o banco
+
+DDL - Linguagem de Definição de Dados / inicio da construção do banco de dados
+Primeiro criar o banco = create database
+Segundo criar a tabela = create table
+Alterar tabelas = alter - só é possivel utilizar esse comando se não tiver nenhum registro no banco
+Apagar tabelas e banco = drop
+
+==================================================================
+
+DML = Linguagem de manipulação de Dados
+
+inserir dados = insert
+excluir dados = delete
+alterar dados = update
+
+===================================================================
+
+DQL = Linguagem de consulta de dados
+
+selecionar dados = select
+
