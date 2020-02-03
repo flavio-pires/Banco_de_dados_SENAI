@@ -143,5 +143,31 @@ SELECT COUNT (IdAlbum) FROM Albuns;
 
 ==========================================================
 
+-- INNER JOIN = mesclar informações das tabelas / ON serve para indicar qual coluna eu quero relacionar
+SELECT * FROM Artistas INNER JOIN Albuns ON Artistas.IdArtista = Albuns.IdArtista
+WHERE Albuns.IdArtista = 2; --seleciona albuns do mesmo artista
+GO --serve para pausar a execução dos blocos
 
+--INNER JOIN
+SELECT Artistas.Nome AS NomeArtista, Albuns.Nome AS NomeAlbum, Albuns.DataLancamento FROM Artistas INNER JOIN Albuns ON Artistas.IdArtista = Albuns.IdArtista
+WHERE DataLancamento = '05-07-2015';
 
+--SELECIONAR ALBUNS E ARTISTAS E ORDENAR POR DATA DE LANCAMENTO COM INNER JOIN
+SELECT * FROM Albuns INNER JOIN Artistas ON Albuns.IdArtista = Artistas.IdArtista
+ORDER BY DataLancamento DESC;
+
+--SELECIONAR OS ARTISTAS DO MESMO ESTILO MUSICAL, MOSTRANDO O NOME DELES
+SELECT Albuns.Nome as NomeAlbuns, Artistas.Nome as NomeArtistas, Estilos.Nome as NomeEstilos, Estilos.IdEstilo, DataLancamento FROM Albuns 
+INNER JOIN Artistas ON Albuns.IdArtista = Artistas.IdArtista
+INNER JOIN Estilos ON Albuns.IdEstilo = Estilos.IdEstilo
+WHERE Estilos.IdEstilo = 2;
+
+INSERT INTO Artistas (Nome)
+VALUES ('Racionais MCs')
+
+INSERT INTO Albuns (Nome, DataLancamento, QtdMinutos, Visualizacao, IdArtista, IdEstilo)
+VALUES ('Nada como um dia após o outro dia', '15-12-2002', 110, 12864930, 6, 2)
+
+UPDATE Albuns
+SET Nome = 'Céu Azul'
+WHERE IdAlbum = 4;
